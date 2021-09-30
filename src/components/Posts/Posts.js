@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import Pagination from '../Pagination/Pagination';
 
 
-const Posts = ({setCurrentName, setSearchBoolean})=>{
+const Posts = ({setCurrentName, setSearchBoolean, getPosts})=>{
     const volcanoes = useSelector((state)=> state.posts);
     const classes = useStyles();
     const [currentPage, setCurrentPage] = useState(1);
@@ -22,7 +22,7 @@ const Posts = ({setCurrentName, setSearchBoolean})=>{
            <Grid className= {classes.containter} container alignItems='stretch' spacing='5'>
                {currentVolcanoes.map((volcano)=>(
                    <Grid key={volcano._id} item xs={12} sm={6}>
-                       <Post setSearchBoolean= {setSearchBoolean} volcano={volcano} setCurrentName={setCurrentName} />
+                       <Post getPosts={getPosts} setSearchBoolean= {setSearchBoolean} volcano={volcano} setCurrentName={setCurrentName} />
                    </Grid>
 
                ))}

@@ -6,16 +6,17 @@ import EditIcon from '@material-ui/icons/Edit';
 import { deleteVolcano } from '../../../actions/posts';
 import useStyles from './styles';
 import volcanoEruptPicture from './VolcanoErupt.png';import { getPosts } from '../../../actions/posts';
-;
 
 
 
-const Post = ({volcano, setCurrentName, setSearchBoolean})=>{
+const Post = ({volcano, setCurrentName, setSearchBoolean, getPosts})=>{
     const classes = useStyles();
     const dispatch = useDispatch();
 
     const removeVolcano= (name)=>{
         dispatch(deleteVolcano(name));
+        dispatch(getPosts());
+
         
     };
 
