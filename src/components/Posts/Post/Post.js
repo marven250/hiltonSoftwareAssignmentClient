@@ -16,7 +16,7 @@ const Post = ({volcano, setCurrentName, setSearchBoolean})=>{
 
     const removeVolcano= (name)=>{
         dispatch(deleteVolcano(name));
-        dispatch(getPosts());
+        
     };
 
     const edit = ()=>{
