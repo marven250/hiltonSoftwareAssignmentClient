@@ -71,7 +71,7 @@ const Form = ({currentName, setCurrentName, searchBoolean, setSearchBoolean})=>{
     };
 
     return (
-        <Paper className={classes.paper}>
+        <Paper id='form' className={classes.paper}>
             {searchBoolean? <AddIcon onClick={flipIcon} /> : <SearchIcon onClick={flipIcon}/>}
                 <HomeIcon onClick={resetVolcanoes} />
             <form autoComplete= 'off' noValidate className= {`${classes.form} ${classes.root}`} onSubmit={handleSubmit}>

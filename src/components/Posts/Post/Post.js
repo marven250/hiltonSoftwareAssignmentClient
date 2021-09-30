@@ -40,7 +40,7 @@ const Post = ({volcano, setCurrentName, setSearchBoolean})=>{
                <Typography className={classes.details} variant= "body2" color= 'textPrimary'>Longitude: {volcano.longitude}</Typography>
            </CardContent>
            <CardActions className= {classes.cardActions}>
-               <Button size= 'small' color='primary' onClick={()=>{edit()}}>
+               <Button href= '#form' size= 'small' color='primary' onClick={()=>{edit()}}>
                     <EditIcon />
                     Edit
                </Button>
