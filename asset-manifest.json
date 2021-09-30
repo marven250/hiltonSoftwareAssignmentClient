@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hiltonSoftwareAssignmentClient/static/css/main.eb7a9660.chunk.css",
-    "main.js": "/hiltonSoftwareAssignmentClient/static/js/main.c5eb97a3.chunk.js",
-    "main.js.map": "/hiltonSoftwareAssignmentClient/static/js/main.c5eb97a3.chunk.js.map",
+    "main.js": "/hiltonSoftwareAssignmentClient/static/js/main.8b390f84.chunk.js",
+    "main.js.map": "/hiltonSoftwareAssignmentClient/static/js/main.8b390f84.chunk.js.map",
     "runtime-main.js": "/hiltonSoftwareAssignmentClient/static/js/runtime-main.57d43ead.js",
     "runtime-main.js.map": "/hiltonSoftwareAssignmentClient/static/js/runtime-main.57d43ead.js.map",
     "static/js/2.3904f877.chunk.js": "/hiltonSoftwareAssignmentClient/static/js/2.3904f877.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.57d43ead.js",
     "static/js/2.3904f877.chunk.js",
     "static/css/main.eb7a9660.chunk.css",
-    "static/js/main.c5eb97a3.chunk.js"
+    "static/js/main.8b390f84.chunk.js"
   ]
 }
