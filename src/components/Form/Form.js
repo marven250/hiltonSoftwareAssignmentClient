@@ -7,7 +7,7 @@ import AddIcon from '@material-ui/icons/Add';
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
 
-const Form = ({currentName, setCurrentName, searchBoolean, setSearchBoolean})=>{
+const Form = ({currentName, setCurrentName, searchBoolean, setSearchBoolean, getPosts})=>{
     const classes = useStyles();
     const dispatch = useDispatch();
     const currentVolcano = useSelector((state)=> currentName? state.posts.find((v)=> v.name == currentName): null);
@@ -63,7 +63,7 @@ const Form = ({currentName, setCurrentName, searchBoolean, setSearchBoolean})=>{
     };
 
     const resetVolcanoes = ()=>{
-        dispatch(searchVolcano({name: ''}))
+        dispatch(getPosts())
     };
 
     const flipIcon = ()=>{

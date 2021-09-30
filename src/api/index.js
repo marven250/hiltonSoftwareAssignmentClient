@@ -14,7 +14,7 @@ export const searchVolcano = async (volcano)=>{
     
     let volcanoArray = volcanoes.data.filter(volcanoData=>{
 
-          return volcanoData.name.toLowerCase().includes(volcano.name.toLowerCase());
+          return volcanoData.name.toLowerCase() == volcano.name.toLowerCase();
                
     })
         return volcanoArray;

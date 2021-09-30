@@ -35,7 +35,7 @@ function App() {
               <Posts getPosts= {getPosts} setSearchBoolean= {setSearchBoolean} setCurrentName={setCurrentName} />
            </Grid>
            <Grid item xs={12} sm={4}> 
-            <Form searchBoolean={searchBoolean} setSearchBoolean= {setSearchBoolean} currentName = {currentName} setCurrentName={setCurrentName} />
+            <Form getPosts= {getPosts} searchBoolean={searchBoolean} setSearchBoolean= {setSearchBoolean} currentName = {currentName} setCurrentName={setCurrentName} />
            </Grid>
           </Grid>
         </Container>
