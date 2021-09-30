@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {TextField, Button, Typography, Paper} from '@material-ui/core'
-import useStyles from './styles'
+import {TextField, Button, Typography, Paper} from '@material-ui/core';
+import useStyles from './styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchVolcano , updateVolcano, createVolcano } from '../../actions/posts';
 import AddIcon from '@material-ui/icons/Add';
@@ -28,21 +28,20 @@ const Form = ({currentName, setCurrentName, searchBoolean, setSearchBoolean})=>{
 
     useEffect(()=>{
         if(currentVolcano){
-            setVolcanoData(currentVolcano)
-        }
-    }, [currentVolcano])
+            setVolcanoData(currentVolcano);
+        };
+    }, [currentVolcano]);
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-        console.log('this is search Boolean', searchBoolean)
         if(currentName){
-            dispatch(updateVolcano(currentName, volcanoData))
+            dispatch(updateVolcano(currentName, volcanoData));
             resetVolcanoes();
         }else if(searchBoolean){
             dispatch(searchVolcano(volcanoData));
         }else{
         dispatch(createVolcano(volcanoData));
-        resetVolcanoes()
+        resetVolcanoes();
         }
         clear();
     }
@@ -60,16 +59,16 @@ const Form = ({currentName, setCurrentName, searchBoolean, setSearchBoolean})=>{
             latitude: "",
             longitude: "",
             type: ""
-        })
-    }
+        });
+    };
 
     const resetVolcanoes = ()=>{
         dispatch(searchVolcano({name: ''}))
-    }
+    };
 
     const flipIcon = ()=>{
         setSearchBoolean(!searchBoolean)
-    }
+    };
 
     return (
         <Paper className={classes.paper}>

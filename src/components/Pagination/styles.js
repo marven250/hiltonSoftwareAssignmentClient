@@ -8,4 +8,4 @@ export default makeStyles((theme)=>({
     otherPages:{
         color: ''
     }
-}))
+}));

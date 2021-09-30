@@ -7,7 +7,7 @@ function Pagination({postsPerPage, totalPosts, paginate, currentPage, setCurrent
 
     for(let i=1; i<= Math.ceil(totalPosts / postsPerPage); i++){
         pageNumbers.push(i);
-    }
+    };
 
 
    const renderPageNumbers = ()=> pageNumbers.map(number => {
@@ -41,6 +41,6 @@ function Pagination({postsPerPage, totalPosts, paginate, currentPage, setCurrent
            
        </nav>
     )
-}
+};
 
-export default Pagination
+export default Pagination;

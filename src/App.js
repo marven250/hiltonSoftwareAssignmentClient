@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import './App.css'
+import './App.css';
 import {Container, AppBar, Typography, Grow, Grid} from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 import Pagination from './components/Pagination/Pagination';
-import {getPosts } from './actions/posts'
+import {getPosts } from './actions/posts';
 import Posts from './components/Posts/Posts';
-import Form from './components/Form/Form'
-import Volcano from './assets/volcano.png'
-import useStyles from './styles'
+import Form from './components/Form/Form';
+import Volcano from './assets/volcano.png';
+import useStyles from './styles';
 
 function App() {
     const classes = useStyles();
@@ -17,7 +17,7 @@ function App() {
       
     useEffect(()=>{
       dispatch(getPosts());
-    }, [dispatch, currentName])
+    }, [dispatch, currentName]);
 
     
   return (

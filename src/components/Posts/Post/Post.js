@@ -4,7 +4,7 @@ import {Card, CardActions, CardContent, CardMedia, Button, Typography} from '@ma
 import DeleteIcon from '@material-ui/icons/Delete'
 import EditIcon from '@material-ui/icons/Edit';
 import { deleteVolcano } from '../../../actions/posts';
-import useStyles from './styles'
+import useStyles from './styles';
 import volcanoEruptPicture from './VolcanoErupt.png';import { getPosts } from '../../../actions/posts';
 ;
 
@@ -17,12 +17,12 @@ const Post = ({volcano, setCurrentName, setSearchBoolean})=>{
     const removeVolcano= (name)=>{
         dispatch(deleteVolcano(name));
         dispatch(getPosts());
-    }
+    };
 
     const edit = ()=>{
         setCurrentName(volcano.name)
         setSearchBoolean(false);
-    }
+    };
     
     return (
        <Card className={classes.card}>
@@ -52,6 +52,6 @@ const Post = ({volcano, setCurrentName, setSearchBoolean})=>{
 
        </Card>
     )
-}
+};
 
 export default Post;

@@ -7,7 +7,7 @@ import Pagination from '../Pagination/Pagination';
 
 
 const Posts = ({setCurrentName, setSearchBoolean})=>{
-    const volcanoes = useSelector((state)=> state.posts)
+    const volcanoes = useSelector((state)=> state.posts);
     const classes = useStyles();
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage, setPostsPerPage] = useState(6);
@@ -30,6 +30,6 @@ const Posts = ({setCurrentName, setSearchBoolean})=>{
            </Grid>
        )
     )
-}
+};
 
 export default Posts;
