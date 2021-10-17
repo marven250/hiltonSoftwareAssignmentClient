@@ -72,8 +72,8 @@ const Form = ({currentName, setCurrentName, searchBoolean, setSearchBoolean, get
 
     return (
         <Paper id='form' className={classes.paper}>
-            {searchBoolean? <AddIcon onClick={flipIcon} /> : <SearchIcon onClick={flipIcon}/>}
-                <HomeIcon onClick={resetVolcanoes} />
+            {searchBoolean? <AddIcon onClick={flipIcon} /> : <SearchIcon id='searchIcon' onClick={flipIcon}/>}
+                <HomeIcon id='homeIcon' onClick={resetVolcanoes} />
             <form autoComplete= 'off' noValidate className= {`${classes.form} ${classes.root}`} onSubmit={handleSubmit}>
                 <Typography variant= 'h6'>{currentName? 'Editing': (searchBoolean? 'Searching':'Creating') } a Volcano</Typography>
                 {searchBoolean? <></>:<TextField
