@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import {Container, AppBar, Typography, Grow, Grid} from '@material-ui/core';
-import { useDispatch, useSelector } from 'react-redux';
-import Pagination from './components/Pagination/Pagination';
+import { useDispatch } from 'react-redux';
 import {getPosts } from './actions/posts';
 import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
@@ -17,7 +16,7 @@ function App() {
       
     useEffect(()=>{
       dispatch(getPosts());
-    }, [dispatch, currentName]);
+    });
 
     
   return (
@@ -32,10 +31,10 @@ function App() {
         <Container>
           <Grid container justify= 'space-between' alignItems= 'stretch' spacing= {3}>
             <Grid item xs={12} sm={7}>
-              <Posts getPosts= {getPosts} setSearchBoolean= {setSearchBoolean} setCurrentName={setCurrentName} />
+              <Posts setSearchBoolean= {setSearchBoolean} setCurrentName={setCurrentName} />
            </Grid>
            <Grid item xs={12} sm={4}> 
-            <Form getPosts= {getPosts} searchBoolean={searchBoolean} setSearchBoolean= {setSearchBoolean} currentName = {currentName} setCurrentName={setCurrentName} />
+            <Form  searchBoolean={searchBoolean} setSearchBoolean= {setSearchBoolean} currentName = {currentName} setCurrentName={setCurrentName} />
            </Grid>
           </Grid>
         </Container>

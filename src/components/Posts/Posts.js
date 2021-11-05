@@ -4,9 +4,10 @@ import Post from './Post/Post'
 import useStyles from './styles'
 import { useSelector } from 'react-redux';
 import Pagination from '../Pagination/Pagination';
+import {getPosts } from '../../actions/posts';
 
 
-const Posts = ({setCurrentName, setSearchBoolean, getPosts})=>{
+const Posts = ({setCurrentName, setSearchBoolean})=>{
     const volcanoes = useSelector((state)=> state.posts);
     const classes = useStyles();
     const [currentPage, setCurrentPage] = useState(1);

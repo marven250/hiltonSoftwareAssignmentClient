@@ -25,11 +25,9 @@ export const createVolcano = (volcano)=> async (dispatch)=>{
 
 export const updateVolcano = (name, updatedVolcano) => async (dispatch) =>{
     try{
-        const {data} = await api.updateVolcano(name, updatedVolcano);
+         await api.updateVolcano(name, updatedVolcano);
+            dispatch({type: 'UPDATE', payload: updatedVolcano});
 
-        if(data){
-            dispatch({type: 'UPDATE', payload: data});
-        };
     }catch(error){
         console.error(error);
     };

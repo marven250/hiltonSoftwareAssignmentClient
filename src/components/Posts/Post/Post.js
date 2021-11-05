@@ -5,7 +5,7 @@ import DeleteIcon from '@material-ui/icons/Delete'
 import EditIcon from '@material-ui/icons/Edit';
 import { deleteVolcano } from '../../../actions/posts';
 import useStyles from './styles';
-import volcanoEruptPicture from './VolcanoErupt.png';import { getPosts } from '../../../actions/posts';
+import volcanoEruptPicture from './VolcanoErupt.png';
 
 
 

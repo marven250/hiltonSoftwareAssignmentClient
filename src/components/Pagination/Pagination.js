@@ -11,9 +11,9 @@ function Pagination({postsPerPage, totalPosts, paginate, currentPage, setCurrent
 
 
    const renderPageNumbers = ()=> pageNumbers.map(number => {
-       let selectedPageStyle = currentPage == number? classes.selectedPage : classes.otherPages;
+       let selectedPageStyle = currentPage === number? classes.selectedPage : classes.otherPages;
 
-        if (number == 1 || number == pageNumbers.length || (number >= currentPage - 2 && number <= currentPage + 2)) {
+        if (number === 1 || number === pageNumbers.length || (number >= currentPage - 2 && number <= currentPage + 2)) {
         return (
             <li key={number} className="page-item">
             <span onClick= {()=> paginate(number)} className={selectedPageStyle + ' page-link'}>
