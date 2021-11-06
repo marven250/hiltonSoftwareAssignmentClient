@@ -3,13 +3,13 @@ import { useDispatch } from 'react-redux';
 import {Card, CardActions, CardContent, CardMedia, Button, Typography} from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete'
 import EditIcon from '@material-ui/icons/Edit';
-import { deleteVolcano } from '../../../actions/posts';
+import { deleteVolcano, updateCurrentVolcano, updateSearchBoolean } from '../../../actions/posts';
 import useStyles from './styles';
 import volcanoEruptPicture from './VolcanoErupt.png';
 
 
 
-const Post = ({volcano, setCurrentName, setSearchBoolean, getPosts})=>{
+const Post = ({volcano})=>{
     const classes = useStyles();
     const dispatch = useDispatch();
 
@@ -19,8 +19,8 @@ const Post = ({volcano, setCurrentName, setSearchBoolean, getPosts})=>{
     };
 
     const edit = ()=>{
-        setCurrentName(volcano.name)
-        setSearchBoolean(false);
+        dispatch(updateCurrentVolcano(volcano.name))
+        dispatch(updateSearchBoolean(false))
     };
     
     return (

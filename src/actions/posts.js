@@ -52,3 +52,22 @@ export const searchVolcano = (volcano)=> async (dispatch) =>{
         console.error(error);
     };
 };
+
+
+export const updateCurrentVolcano = (currentVolcano)=> async (dispatch)=>{
+    try{
+            dispatch({type: 'UPDATE_CURRENT_VOLCANO', payload: currentVolcano});
+        
+    }catch(error){
+        console.error(error);
+    };
+};
+
+export const updateSearchBoolean = (searchBoolean) => async (dispatch)=>{
+    try{
+            dispatch({type: 'UPDATE_SEARCH_BOOLEAN', payload: searchBoolean});
+        
+    }catch(error){
+        console.error(error);
+    };
+};

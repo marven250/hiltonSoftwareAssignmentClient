@@ -3,14 +3,16 @@ import {TextField, Button, Typography, Paper} from '@material-ui/core';
 import useStyles from './styles';
 import { useDispatch, useSelector } from 'react-redux';
 import {getPosts } from '../../actions/posts';
-import { searchVolcano , updateVolcano, createVolcano } from '../../actions/posts';
+import { searchVolcano , updateVolcano, createVolcano, updateSearchBoolean } from '../../actions/posts';
 import AddIcon from '@material-ui/icons/Add';
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
 
-const Form = ({currentName, setCurrentName, searchBoolean, setSearchBoolean})=>{
+const Form = ()=>{
     const classes = useStyles();
     const dispatch = useDispatch();
+    var currentName = useSelector(state=>state.currentVolcano)
+    var searchBoolean = useSelector(state=>state.searchBoolean)
     const currentVolcano = useSelector((state)=> currentName? state.posts.find((v)=> v.name === currentName): null);
     const [volcanoData, setVolcanoData] = useState({
         _id: "",
@@ -29,9 +31,9 @@ const Form = ({currentName, setCurrentName, searchBoolean, setSearchBoolean})=>{
 
     useEffect(()=>{
         if(currentVolcano){
-            setVolcanoData(currentVolcano);
+            setVolcanoData(currentVolcano)
         };
-    }, [currentVolcano]);
+    }, [currentName]);
 
     const handleSubmit = (e)=>{
         e.preventDefault();
@@ -46,7 +48,7 @@ const Form = ({currentName, setCurrentName, searchBoolean, setSearchBoolean})=>{
     }
 
     const clear = ()=>{
-        setCurrentName(null);
+        dispatch(updateVolcano(currentName, null));
         setVolcanoData({
             _id: "",
             index: "",
@@ -66,7 +68,7 @@ const Form = ({currentName, setCurrentName, searchBoolean, setSearchBoolean})=>{
     };
 
     const flipIcon = ()=>{
-        setSearchBoolean(!searchBoolean)
+        dispatch(updateSearchBoolean(!searchBoolean))
     };
 
     return (
