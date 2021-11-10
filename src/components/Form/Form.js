@@ -48,7 +48,6 @@ const Form = ()=>{
     }
 
     const clear = ()=>{
-        dispatch(updateVolcano(currentName, null));
         setVolcanoData({
             _id: "",
             index: "",
